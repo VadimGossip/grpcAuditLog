@@ -3,7 +3,6 @@ module github.com/VadimGossip/grpcAuditLog
 go 1.19
 
 require (
-	github.com/GOLANG-NINJA/crud-audit-log v0.0.0-20210928080325-bc413f0c2ace
 	github.com/joho/godotenv v1.4.0
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/sirupsen/logrus v1.9.0
