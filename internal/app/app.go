@@ -49,43 +49,4 @@ func Run(configDir string) {
 	<-quit
 
 	logrus.Info("Audit Server for fin manager service stopped")
-
-	//db, err := database.NewPostgresConnection(cfg.Postgres)
-	//if err != nil {
-	//	logrus.Fatalf("Postgres connection error %s", err)
-	//}
-	//
-	//usersRepo := psql.NewUsers(db)
-	//tokensRepo := psql.NewTokens(db)
-	//hasher := hash.NewSHA1Hasher(cfg.Auth.Salt)
-	//usersService := service.NewUsers(usersRepo, tokensRepo, hasher, []byte(cfg.Auth.Secret), cfg.Auth.AccessTokenTTL, cfg.Auth.RefreshTokenTTL)
-	//
-	//docsRepo := psql.NewDocs(db)
-	//cache := simpleCache.NewCache()
-	//docsService := service.NewBooks(docsRepo, cache)
-	//
-	//handler := rest.NewHandler(usersService, docsService)
-	//server := http.NewServer()
-	//
-	//go func() {
-	//	if err := server.Run(cfg.Server, handler.InitRoutes()); err != nil {
-	//		logrus.Fatalf("error occured while running rest server: %s", err.Error())
-	//	}
-	//}()
-	//
-	//logrus.Info("Http Server for fin manager service started")
-	//
-	//quit := make(chan os.Signal, 1)
-	//signal.Notify(quit, syscall.SIGTERM, syscall.SIGINT)
-	//<-quit
-	//
-	//logrus.Info("Http Server for fin manager service stopped")
-	//
-	//if err := db.Close(); err != nil {
-	//	logrus.Errorf("Error occured on postgres connection close: %s", err.Error())
-	//}
-	//
-	//if err := server.Shutdown(context.Background()); err != nil {
-	//	logrus.Errorf("Error occured on http server for fin manager service shutting down: %s", err.Error())
-	//}
 }

@@ -1,9 +1,7 @@
 package config
 
 import (
-	"github.com/joho/godotenv"
 	"github.com/kelseyhightower/envconfig"
-	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 )
 
@@ -63,11 +61,4 @@ func Init(configDir string) (*Config, error) {
 		return nil, err
 	}
 	return &cfg, nil
-}
-
-func init() {
-	err := godotenv.Load()
-	if err != nil {
-		logrus.Fatal("Error loading .env file")
-	}
 }
